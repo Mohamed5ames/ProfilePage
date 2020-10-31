@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'Widgets/ProfileDropDownButton.dart';
-import 'Widgets/ProfileTextField.dart';
+import '../Widgets/ProfileDropDownButton.dart';
+import '../Widgets/ProfileTextField.dart';
 
 class ProfilePage extends StatefulWidget {
   @override

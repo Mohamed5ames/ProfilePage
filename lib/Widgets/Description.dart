@@ -1,17 +1,20 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ProfileTextField extends StatelessWidget {
-  ProfileTextField({@required this.hint, this.myIcon});
+class DescriptionTextField extends StatelessWidget {
+  DescriptionTextField({@required this.hint, this.myIcon});
   final String hint;
   final IconButton myIcon;
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 20.w),
+      width: double.infinity,
+      height: 350.h,
       decoration: BoxDecoration(
         color: Color(0xffeeeeee),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(25),
       ),
       child: TextFormField(
         style: TextStyle(
@@ -19,21 +22,25 @@ class ProfileTextField extends StatelessWidget {
             fontSize: 50.sp,
             color: Colors.black,
             fontWeight: FontWeight.w700),
-        maxLines: 1,
+        maxLines: 8,
         decoration: InputDecoration(
+          contentPadding: EdgeInsets.only(
+            left: 60.w,
+            top: 85.h,
+          ),
           suffixIcon: myIcon,
           fillColor: Color(0xffeeeeee),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(
-              Radius.circular(20),
+              Radius.circular(25),
             ),
             borderSide: BorderSide(
-              color: Color(0xffeeeeee),
+              color: Colors.grey,
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(
-              Radius.circular(20),
+              Radius.circular(25),
             ),
             borderSide: BorderSide(
               color: Color(0xffeeeeee),
