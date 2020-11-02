@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class DescriptionTextField extends StatelessWidget {
-  DescriptionTextField({@required this.hint, this.myIcon});
+class LocationTextField extends StatelessWidget {
+  LocationTextField({@required this.hint, this.myIcon});
   final String hint;
   final IconButton myIcon;
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 40.h),
-      width: double.infinity,
-      height: 350.h,
+      width: 750.w,
       decoration: BoxDecoration(
         color: Color(0xffeeeeee),
         borderRadius: BorderRadius.circular(25),
@@ -21,12 +19,9 @@ class DescriptionTextField extends StatelessWidget {
             fontSize: 50.sp,
             color: Colors.black,
             fontWeight: FontWeight.w700),
-        maxLines: 8,
+        maxLines: 1,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.only(
-            left: 60.w,
-            top: 85.h,
-          ),
+          contentPadding: EdgeInsets.only(left: 60.w, top: 85.h),
           suffixIcon: myIcon,
           fillColor: Color(0xffeeeeee),
           enabledBorder: OutlineInputBorder(

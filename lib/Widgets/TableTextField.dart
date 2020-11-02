@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class DescriptionTextField extends StatelessWidget {
-  DescriptionTextField({@required this.hint, this.myIcon});
+class TableTextField extends StatelessWidget {
+  TableTextField({@required this.hint, this.myIcon});
   final String hint;
   final IconButton myIcon;
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 40.h),
-      width: double.infinity,
-      height: 350.h,
       decoration: BoxDecoration(
         color: Color(0xffeeeeee),
         borderRadius: BorderRadius.circular(25),
@@ -18,15 +15,12 @@ class DescriptionTextField extends StatelessWidget {
       child: TextFormField(
         style: TextStyle(
             fontFamily: 'Segoue',
-            fontSize: 50.sp,
+            fontSize: 40.sp,
             color: Colors.black,
             fontWeight: FontWeight.w700),
-        maxLines: 8,
+        maxLines: 1,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.only(
-            left: 60.w,
-            top: 85.h,
-          ),
+          contentPadding: EdgeInsets.only(left: 60.w, top: 85.h),
           suffixIcon: myIcon,
           fillColor: Color(0xffeeeeee),
           enabledBorder: OutlineInputBorder(
@@ -34,7 +28,7 @@ class DescriptionTextField extends StatelessWidget {
               Radius.circular(25),
             ),
             borderSide: BorderSide(
-              color: Colors.grey,
+              color: Color(0xffeeeeee),
             ),
           ),
           focusedBorder: OutlineInputBorder(
@@ -47,9 +41,9 @@ class DescriptionTextField extends StatelessWidget {
           ),
           hintText: hint,
           hintStyle: TextStyle(
-            fontSize: 50.sp,
+            fontSize: 40.sp,
             fontFamily: 'Segoue',
-            color: Colors.grey,
+            color: Colors.black,
             fontWeight: FontWeight.w500,
           ),
         ),
